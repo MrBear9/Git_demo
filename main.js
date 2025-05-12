@@ -1,0 +1,1 @@
+dispatchEvent(0)
