@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+        }
+        .main-flow {
+            display: flex;
+            justify-content: space-between;
+            width: 900px;
+            position: relative;
+            margin: 20px 0;
+        }
+        .phase-box {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 0 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .phase-title {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .sub-step {
+            background: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        .connector {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #666;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        .algorithm { background: #2196F3; }
+        .simulation { background: #4CAF50; }
+        .scaling { background: #FF9800; }
+    </style>
+</head>
+<body>
+    <div class="flow-container">
+        <div class="main-flow">
+            <div class="connector"></div>
+            
+            <!-- 算法验证 -->
+            <div class="phase-box">
+                <div class="phase-title algorithm">算法验证</div>
+                <div class="sub-step">二维场景测试<br>(PSO/GA/ACO/混合)</div>
+                <div class="sub-step">Matlab三维场景<br>静态避障验证</div>
+            </div>
+
+            <!-- 动态测试 -->
+            <div class="phase-box">
+                <div class="phase-title simulation">动态环境测试</div>
+                <div class="sub-step">CoppeliaSim建模</div>
+                <div class="sub-step">实时物理交互仿真<br>动态避障验证</div>
+            </div>
+
+            <!-- 规模扩展 -->
+            <div class="phase-box">
+                <div class="phase-title scaling">规模扩展测试</div>
+                <div class="sub-step">10-30架无人机扩展</div>
+                <div class="sub-step">计算复杂度分析<br>成功率评估</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; color: #666; margin-top: 20px;">
+            ▼ 流程方向 ▼
+        </div>
+    </div>
+</body>
+</html>
